@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Quattrocento+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  /* height:100% ; */
+  overflow: hidden;
+  /* background-color: #e7eff0; */
+background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+
+  min-height: 100vh;
+}
+

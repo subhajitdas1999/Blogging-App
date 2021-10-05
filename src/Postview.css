@@ -1,0 +1,74 @@
+
+
+.postview__loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.postview__container{
+    max-width: 750px;
+    margin: 15px auto;
+    padding: 10px 20px;
+    
+}
+
+.postview__heading{
+    font-family: "Balsamiq Sans", cursive;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin: 15px 0;
+    word-wrap: break-word;
+    
+}
+
+.postview__profile__details{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid grey;
+}
+.postview__profile__info{
+    margin-left: 8px;
+    font-family: "Quattrocento Sans", sans-serif;
+}
+.postview__profile__name{
+    
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.postview__img{
+   /* background-color: red; */
+    max-width: 500px;
+    height: auto;
+    margin:20px auto;
+    /* max-height: 400px; */
+}
+
+.postview__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.postview__content{
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size:1.5rem;
+    line-height: 2.1rem;
+    word-wrap: break-word;
+}
+
+@media (max-width:700px){
+    .postview__heading{
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+
+    }
+    .postview__content{
+        font-size:1.2rem;
+        line-height: 1.6rem;
+    }
+}

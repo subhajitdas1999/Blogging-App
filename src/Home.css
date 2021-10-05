@@ -1,0 +1,30 @@
+.home__createIcon {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  color: white;
+  background-color: #000000;
+  transform: scale(1.8);
+  cursor: pointer;
+}
+
+
+.home__main{
+  background-color: red;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.home__blog_preview{
+  max-height: 300px;
+  /* text-overflow: ellipsis; */
+}
+
+.home__blog_preview p{
+  font-size:1.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

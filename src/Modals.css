@@ -1,0 +1,26 @@
+.Modals__logIn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modals__logIn > *{
+    margin: 10px 0;
+}
+
+.Modals__uploding{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.Modals__uploding progress{
+    padding: 10px;
+    
+}
+
+.Modals__uploding span{
+    font-size: 0.7rem;
+}

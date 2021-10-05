@@ -1,0 +1,16 @@
+.profile__loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.profile__container{
+    max-width: 750px;
+    margin: 20px auto;
+}
+.profile__container__heading{
+    font-family: cursive;
+    text-align: center;
+    color: grey;
+}
