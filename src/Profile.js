@@ -23,7 +23,7 @@ function Profile() {
           setUserposts(
             snapshot.docs.map((doc) => ({
               id: doc.id,
-              data: doc.data(),
+              data: doc.data()
             }))
           );
           setloading(false);
@@ -31,7 +31,7 @@ function Profile() {
     } else {
       setModalOpen((prev) => ({
         ...prev,
-        ["logIn"]: true,
+        ["logIn"]: true
       }));
     }
   }, [user.user]);

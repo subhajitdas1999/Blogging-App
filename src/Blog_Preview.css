@@ -4,6 +4,7 @@
   padding: 10px 20px;
 
   border-bottom: 1px dotted grey;
+  position: relative;
   /* background-color: red; */
 }
 .blog_preview__details {
@@ -80,12 +81,20 @@
   content: " - ";
 }
 
-.blog_preview__info__link{
+.info_btns_container {
+  width: 75px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.blog_preview__info__link {
   /* text-decoration: none !important; */
   color: black !important;
 }
 
-.blog_preview__info__btn{
+.blog_preview__info__btn {
   cursor: pointer;
 }
 
@@ -93,7 +102,7 @@
   .blog_preview__details {
     flex-direction: column-reverse;
   }
- 
+
   .blog_preview__details__img {
     margin-bottom: 1.8rem;
   }
