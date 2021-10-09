@@ -2,21 +2,22 @@ import React, { useContext, useState } from "react";
 import "./Blog_Preview.css";
 import { Link } from "react-router-dom";
 import moment from "moment";
-import { userContext,forDocEditContext } from "./App";
+import { userContext, forDocEditContext } from "./App";
 import { db } from "./firebase";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Tooltip from "@material-ui/core/Tooltip";
 // import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import EditIcon from "@material-ui/icons/Edit";
+import { IconButton } from "@material-ui/core";
 // import { Link } from "react-router-dom";
 
 function Blog_Preview({ post, Isprofile }) {
   const [user, setUser] = useContext(userContext);
-  const [forEditDocId,setForEditDocId] = useContext(forDocEditContext);
+  const [forEditDocId, setForEditDocId] = useContext(forDocEditContext);
 
   //For Edit
-  function handleEdit(){
-    setForEditDocId({id:post.id});
+  function handleEdit() {
+    setForEditDocId({ id: post.id });
   }
 
   //Delete post
@@ -44,6 +45,27 @@ function Blog_Preview({ post, Isprofile }) {
   }
   return (
     <div className="blog_preview">
+      <div className="info_btns_container">
+        {Isprofile && (
+          <Link to="/writeblog" className="blog_preview__info__link">
+            <IconButton
+              className="blog_preview__info__btn"
+              onClick={handleEdit}
+            >
+              <Tooltip title="Edit">
+                <EditIcon />
+              </Tooltip>
+            </IconButton>
+          </Link>
+        )}
+        {Isprofile && (
+          <IconButton className="blog_preview__info__btn" onClick={deletePost}>
+            <Tooltip title="Delete">
+              <DeleteIcon />
+            </Tooltip>
+          </IconButton>
+        )}
+      </div>
       <Link
         to={`/blog/${post.id}`}
         style={{ textDecoration: "none", color: "black" }}
@@ -57,7 +79,7 @@ function Blog_Preview({ post, Isprofile }) {
             className="blog_preview__details__img"
             style={{
               backgroundImage: `url(${post.data.imgURL})`,
-              display: post.data.imgURL ? "block" : "none",
+              display: post.data.imgURL ? "block" : "none"
             }}
           />
         </div>
@@ -71,24 +93,7 @@ function Blog_Preview({ post, Isprofile }) {
             ).fromNow()}
           </span>
         </div>
-        {Isprofile && (
-          <Link to="/writeblog" className="blog_preview__info__link">
-          <div className="blog_preview__info__btn" onClick={handleEdit}>
-            
-              <Tooltip title="Edit">
-                <EditIcon />
-              </Tooltip>
-            
-          </div>
-          </Link>
-        )}
-        {Isprofile && (
-          <div className="blog_preview__info__btn" onClick={deletePost}>
-            <Tooltip title="Delete">
-              <DeleteIcon />
-            </Tooltip>
-          </div>
-        )}
+
         <div className="blog_preview__info__author">
           {post.data.displayName}
         </div>
